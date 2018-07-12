@@ -1,0 +1,9 @@
+<h2>Components</h2>
+<% 1.upto(10).each do |i| %>
+  <app :message="<%= "HELLO".to_json %>"></app>
+<% end %>
+
+
+<app inline-template :message="<%= "GOOOO".to_json %>">
+  <h1>{{ message }} </h1>
+</app>
