@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'pages#welcome'
   get 'samples/show'
   get 'components/show'
+  get 'checkboxes/show'
 end
