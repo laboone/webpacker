@@ -2,27 +2,27 @@
 
 
 <h2>binding</h2>
-<div id="name_app">
+<div id="name_app" data-vue="name_app">
   <label for="name">Name:</label>
   <input id="name" type="text" v-model="name" /> <!--v-model is doing the magic here-->
   <p>{{ name }}</p>
 </div>
 
 <h2>lazy binding</h2>
-<div id="name_lazy_app">
+<div id="name_lazy_app" data-vue="name_lazy_app">
   <label for="name">Name:</label>
   <input id="name" type="text" v-model.lazy="name" /> <!--v-model is doing the magic here-->
   <p>{{ name }}</p>
 </div>
 
 <h2>toggle color</h2>
-<div id="toggle_app">
+<div id="toggle_app" data-vue="toggle_app">
   <button @click="active = !active" :aria-pressed="active ? 'true' : 'false'">Toggle me</button>
   <p :class="{ red: active }">Sometimes I need to be styled differently</p>
 </div>
 
 <h2>toggle panel</h2>
-<div id="toggle_panel_app">
+<div id="toggle_panel_app" data-vue="toggle_panel_app">
   <button @click="show = !show" :aria-expanded="show ? 'true' : 'false'">
     Toggle Panel
   </button>
@@ -31,7 +31,7 @@
 
 <h2>toggle with v-show</h2>
 <!-- v-showを使うと宣言的になってtoggleの場合は非常によい -->
-<div id="toggle_with_v_show">
+<div id="toggle_with_v_show" data-vue="toggle_with_v_show">
   <label for="textarea">What is your favorite kind of taco?</label>
   <br>
   <textarea id="textarea" v-model="tacos"></textarea>
@@ -40,7 +40,7 @@
 </div>
 
 <h2>form</h2>
-<div id="form_app">
+<div id="form_app" data-vue="form_app">
   <form @submit.prevent="submitForm">
     <div>
       <label for="name">Name:</label><br>

@@ -7,14 +7,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'hello_vue', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'name_vue', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'component_vue', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <div class="container" data-behavior="vue">
       <%= yield %>
     </div>
+  <div>
+    <br>
+    <%= link_to "root", root_path %>
+  </div>
   </body>
 </html>
