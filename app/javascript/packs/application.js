@@ -10,6 +10,7 @@
 console.log('Hello World from Webpacker')
 import TurbolinksAdapter from 'vue-turbolinks';
 import Vue from 'vue/dist/vue.esm.js'
+import axios from 'axios'
 Vue.use(TurbolinksAdapter)
 
 var vms = []
@@ -23,10 +24,13 @@ requireContext.keys().forEach(key => {
 
 document.addEventListener('turbolinks:load', () => {
   let templates = document.querySelectorAll('[data-vue]')
+  axios.defaults.headers.common['X-CSRF-Token'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+
   for (let el of templates) {
     let vm = new Vue(
       Object.assign(options[el.dataset.vue], { el })
     )
+    vm.axios = axios
     vms.push(vm)
   }
 })

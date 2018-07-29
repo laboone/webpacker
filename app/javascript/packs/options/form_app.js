@@ -10,7 +10,7 @@ export default {
   },
   methods: {
     submitForm() {
-      axios.post('//jsonplaceholder.typicode.com/posts', {
+      this.axios.post('//jsonplaceholder.typicode.com/posts', {
         name: this.name,
         email: this.email,
         caps: this.caps

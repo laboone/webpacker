@@ -1,0 +1,14 @@
+<div data-vue="ajax">
+  <form @submit.prevent="submitForm">
+    <div>
+      <label for="name">Name:</label><br>
+      <input id="name" type="text" v-model="name"/>
+    </div>
+
+    <button type="submit">Submit</button>
+    <div>
+      <h3>Response from server:</h3>
+      <pre>{{ response }}</pre>
+    </div>
+  </form>
+</div>
